@@ -39,7 +39,7 @@ const CatSpace = () => {
   return (
     <View
       style={styles.mainContainer}>
-      <Text style={{ marginTop: 30 }}>Cat Space</Text>
+      <Text style={styles.pageHeader}>Cat Space</Text>
       <CatProfile
         avatar="https://reactnative.dev/docs/assets/p_cat1.png"
         firstName="Jesse"
@@ -55,6 +55,10 @@ const CatSpace = () => {
 };
 
 const styles = StyleSheet.create({
+  pageHeader: {
+    fontSize: 20,
+    marginTop: 30
+  },
   catProfileContainer: {
     flex: 1,
     alignItems: 'center',

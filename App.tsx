@@ -1,7 +1,7 @@
 import React from 'react';
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
-import CatSpace from './pages';
+import CatSpace from './pages/CatSpace';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
