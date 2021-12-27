@@ -1,39 +1,7 @@
 import React, { useState } from 'react';
-import { Text, View, Image, TextInput, Button } from 'react-native';
+import { Text, View } from 'react-native';
 import { StyleSheet } from 'react-native';
-
-const CatProfile = (props: any) => {
-  const [isHungry, setIsHungry] = useState(true);
-
-  const getFullName = (firstName: string, lastName: string) => {
-    return firstName + ' ' + lastName;
-  };
-
-  const [name, setNewName] = useState(getFullName(props.firstName, props.lastName));
-
-  return (
-    <View
-      style={styles.catProfileContainer}>
-      <Image
-        source={{ uri: props.avatar }}
-        style={styles.image}></Image>
-      <Text>{name}</Text>
-      <TextInput
-        style={styles.textInput}
-        defaultValue={name}
-        placeholder='Enter a new name'
-        onChangeText={text => setNewName(text)}
-      />
-      <Button
-        title={isHungry ? 'Pour me some milk please' : 'Thank you!'}
-        onPress={() => {
-          setIsHungry(false);
-        }}
-        disabled={!isHungry}
-      />
-    </View>
-  );
-};
+import { CatProfile } from '../../components/CatSpace/CatProfile';
 
 const CatSpace = () => {
   return (
